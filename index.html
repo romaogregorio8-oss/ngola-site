@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGOLA – Linguagem Funcional</title>
+    
+    <!-- Ícones (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">
+                NGOLA 
+            </div>
+            <ul class="menu">
+                <li><a href="#home" class="active">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#sintaxe">Sintaxe</a></li>
+                <li><a href="#exemplos">Exemplos</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">NGOLA</h1>
+            <p class="hero-subtitle">Criada do zero em C++</p>
+            
+            <div class="badges">
+                <span class="badge"><i class="fas fa-check-circle"></i> Lexer 100%</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> Parser 100%</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> AST 100%</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> Interpretador</span>
+            </div>
+            
+            <div class="hero-actions">
+                <a href="#download" class="btn btn-primary"><i class="fas fa-download"></i> Download</a>
+                <a href="#sintaxe" class="btn btn-outline"><i class="fas fa-book"></i> Documentação</a>
+            </div>
+            
+            <!-- JANELA DE CÓDIGO -->
+            <div class="code-window">
+                <div class="window-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="filename">exemplo.ngola</span>
+                </div>
+                <pre><span class="comment">// Meu primeiro programa</span>
+<span class="keyword">mostra</span> <span class="string">"Olá, NGOLA!"</span>
+
+x = <span class="number">10</span>
+y = <span class="number">20</span>
+<span class="keyword">mostra</span> <span class="string">"Soma: "</span> + (x + y)</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Sobre</h2>
+            
+            <div class="sobre-grid">
+                <div class="sobre-texto">
+                    <p class="lead"><strong>NGOLA</strong> é uma linguagem de programação funcional desenvolvida inteiramente em C++.</p>
+                    
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Pipeline Completo</h3>
+                            <p>Lexer, Parser, AST e Interpretador – 100% funcionais.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Sistema de Tipos</h3>
+                            <p>Números, strings e booleanos com operações entre tipos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>IDE Profissional</h3>
+                            <p>Editor com syntax highlighting e 5 temas exclusivos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">.cpp</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">.h</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Temas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">149</span>
+                        <span class="stat-label">MB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SINTAXE -->
+    <section id="sintaxe" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-code"></i> Sintaxe</h2>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-hashtag card-icon"></i>
+                    <h3>Comentários</h3>
+                    <pre><span class="comment">// Linha</span>
+<span class="comment">/* Bloco */</span></pre>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-cube card-icon"></i>
+                    <h3>Variáveis</h3>
+                    <pre>x = <span class="number">10</span>
+nome = <span class="string">"João"</span>
+ok = <span class="keyword">verdadeiro</span></pre>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-print card-icon"></i>
+                    <h3>Saída</h3>
+                    <pre><span class="keyword">mostra</span> <span class="string">"Olá"</span>
+<span class="keyword">mostra</span> x + y</pre>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-calculator card-icon"></i>
+                    <h3>Aritméticos</h3>
+                    <pre>+  -  *  /  %</pre>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-balance-scale card-icon"></i>
+                    <h3>Comparação</h3>
+                    <pre>>  <  ==  !=  >=  <=</pre>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-toggle-on card-icon"></i>
+                    <h3>Booleanos</h3>
+                    <pre><span class="keyword">verdadeiro</span>  <span class="keyword">falso</span></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXEMPLOS -->
+    <section id="exemplos" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-file-code"></i> Exemplos</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="tab1">Operações</button>
+                <button class="tab-btn" data-tab="tab2">Strings</button>
+                <button class="tab-btn" data-tab="tab3">Booleanos</button>
+            </div>
+            
+            <div class="tab-panel active" id="tab1">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="filename">operacoes.ngola</span>
+                        <button class="copy-btn" data-code="code1"><i class="far fa-copy"></i> Copiar</button>
+                    </div>
+                    <pre id="code1"><span class="comment">// Operações básicas</span>
+x = <span class="number">10</span>
+y = <span class="number">3</span>
+
+<span class="keyword">mostra</span> <span class="string">"Soma: "</span> + (x + y)
+<span class="keyword">mostra</span> <span class="string">"Resto: "</span> + (x % y)</pre>
+                </div>
+            </div>
+            
+            <div class="tab-panel" id="tab2">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="filename">strings.ngola</span>
+                        <button class="copy-btn" data-code="code2"><i class="far fa-copy"></i> Copiar</button>
+                    </div>
+                    <pre id="code2"><span class="comment">// Strings</span>
+nome = <span class="string">"Maria"</span>
+<span class="keyword">mostra</span> <span class="string">"Olá, "</span> + nome</pre>
+                </div>
+            </div>
+            
+            <div class="tab-panel" id="tab3">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="filename">booleanos.ngola</span>
+                        <button class="copy-btn" data-code="code3"><i class="far fa-copy"></i> Copiar</button>
+                    </div>
+                    <pre id="code3"><span class="comment">// Booleanos</span>
+a = <span class="number">10</span>
+b = <span class="number">5</span>
+<span class="keyword">mostra</span> a > b
+<span class="keyword">mostra</span> <span class="keyword">verdadeiro</span></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-cloud-download-alt"></i> Download</h2>
+            
+            <div class="download-card">
+                <div class="download-info">
+                    <span class="version">v2.0</span>
+                    <span class="platform">Windows</span>
+                    <span class="size">149 MB</span>
+                </div>
+                
+                <ul class="download-list">
+                    <li><i class="fas fa-check-circle"></i> Editor com syntax highlighting</li>
+                    <li><i class="fas fa-check-circle"></i> 5 temas exclusivos</li>
+                    <li><i class="fas fa-check-circle"></i> Execução integrada</li>
+                    <li><i class="fas fa-check-circle"></i> Portátil</li>
+                </ul>
+                
+                <a href="#" class="btn-download" onclick="alert('Download disponível em breve!'); return false;">
+                    <i class="fas fa-download"></i> Baixar ZIP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 NGOLA – Linguagem de Programação</p>
+            <p>Feito com <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="back-to-top" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- JavaScript -->
+    <script src="./main.js"></script>
+</body>
+</html>
